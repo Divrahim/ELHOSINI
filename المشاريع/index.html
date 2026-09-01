@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مشاريعنا | شركة الحسيني للمقاولات</title>
+    <meta name="description"
+        content="تصفح معرض مشاريع شركة الحسيني للمقاولات. أحدث المشاريع السكنية والتجارية، الفلل، وتشطيبات الديكور في أسوان ومحافظات مصر." />
+    <meta name="keywords"
+        content="مشاريعنا, سابقة أعمال, صور مشاريع, فلل أسوان, تشطيبات حديثة, مشاريع مقاولات, كومباوند, تشطيب فاخر, واجهات, لاند سكيب, حمامات سباحة, تصميم داخلي, تصميم خارجي" />
+    <meta name="author" content="الحسيني للمقاولات" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://alhusseinycont.com/المشاريع" />
+    <meta property="og:title" content="مشاريعنا | شركة الحسيني للمقاولات" />
+    <meta property="og:description"
+        content="تصفح معرض مشاريع شركة الحسيني للمقاولات. أحدث المشاريع السكنية والتجارية، الفلل، وتشطيبات الديكور." />
+    <meta property="og:image" content="../image/logo.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://alhusseinycont.com/المشاريع" />
+    <meta property="twitter:title" content="مشاريعنا | شركة الحسيني للمقاولات" />
+    <meta property="twitter:description"
+        content="تصفح معرض مشاريع شركة الحسيني للمقاولات. أحدث المشاريع السكنية والتجارية، الفلل، وتشطيبات الديكور." />
+    <meta property="twitter:image" content="../image/logo.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../image/icon.png" />
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/normalize.css" />
+
+    <!-- Lenis for Smooth Scroll -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap"
+        rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0a192f",
+                        secondary: "#142a4b",
+                        accent: "#ffd700",
+                        accent2: "#ffae00",
+                        "text-main": "#ffffff",
+                        "text-light": "#e0e0e0",
+                        "text-muted": "#8892b0",
+                        "border-color": "#334155",
+                    },
+                    fontFamily: {
+                        sans: ["Tajawal", "sans-serif"],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                },
+            },
+        };
+    </script>
+</head>
+
+<body class="bg-primary text-text-main font-sans overflow-x-hidden">
+
+    <header id="main-header" class="floating-nav">
+        <div class="w-full px-6 md:px-10">
+
+            <div class="flex items-center justify-between py-3">
+
+                <div class="flex items-center gap-12">
+                    <!-- (1) Logo + Name + Toggle -->
+                    <div class="flex items-center gap-4">
+
+                        <!-- Toggle (Magnetic Animated) -->
+                        <button id="menu-toggle" type="button" aria-label="Toggle menu"
+                            class="magnetic-toggle md:hidden">
+                            <div class="burger-lines">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </button>
+
+                        <!-- Logo & Name -->
+                        <a href="../" class="flex items-center gap-3 group">
+                            <img src="../image/logo.png"
+                                class="w-12 h-12 rounded-full object-cover border-2 border-transparent group-hover:border-accent transition-all duration-300"
+                                alt="شعار الحسيني للمقاولات">
+
+                            <div class="text-right leading-tight">
+                                <h3 class="text-lg font-bold text-white group-hover:text-accent transition-colors">
+                                    الحسيني</h3>
+                            </div>
+                        </a>
+
+                    </div>
+
+                    <!-- (2) Center Navigation (Desktop) -->
+                    <nav
+                        class="hidden md:flex items-center gap-8 bg-white/5 px-8 py-2 rounded-full backdrop-blur-sm border border-white/5">
+
+                        <a href="../"
+                            class="text-text-light font-medium text-sm hover:text-accent transition">الرئيسية</a>
+                        <span class="w-[1px] h-4 bg-white/10"></span>
+
+                        <a href="../من-نحن/"
+                            class="text-text-light font-medium text-sm hover:text-accent transition">من نحن</a>
+                        <span class="w-[1px] h-4 bg-white/10"></span>
+
+                        <a href="#" class="text-accent font-medium text-sm transition">المشاريع</a>
+                        <span class="w-[1px] h-4 bg-white/10"></span>
+
+                        <a href="../مقالات/"
+                            class="text-text-light font-medium text-sm hover:text-accent transition">مقالات</a>
+
+                    </nav>
+                </div>
+
+                <!-- (3) Header Buttons -->
+                <div class="flex items-center gap-4">
+                    <a href="tel:+201003110809"
+                        class="flex items-center gap-2 bg-accent hover:bg-accent2 text-primary px-4 py-2 md:px-5 md:py-2 rounded-full text-sm font-bold transition transform hover:scale-105">
+                        <span class="hidden md:inline">تواصل معنا</span>
+                        <i class="fas fa-phone-alt text-xs"></i>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- (4) MOBILE MENU -->
+            <ul class="dropdown-menu">
+                <li><a href="../">الرئيسية</a></li>
+                <li><a href="../من-نحن/">من نحن</a></li>
+                <li><a href="#">المشاريع</a></li>
+                <li><a href="../مقالات/">مقالات</a></li>
+            </ul>
+
+        </div>
+    </header>
+
+
+    <main class="pt-0">
+
+        <!-- HERO SECTION — PAGE: PROJECTS -->
+        <section id="hero" class="relative min-h-screen flex items-center justify-center text-center 
+                    bg-fixed bg-center bg-cover" style="background-image: url('../image/2.png');">
+
+            <!-- Dark Overlay -->
+            <div class="absolute inset-0 bg-black/70"></div>
+
+            <!-- Content -->
+            <div class="relative z-20 max-w-5xl mx-auto px-4 reveal">
+
+                <h1 class="text-5xl sm:text-6xl md:text-7xl font-black text-white drop-shadow-xl mb-6">
+                    مشاريع <span class="text-accent">نفخر بها</span>
+                </h1>
+
+                <p class="text-lg sm:text-xl md:text-2xl text-text-light max-w-3xl mx-auto leading-relaxed mb-10">
+                    نقدم مشاريع متميزة ومتكاملة بأعلى درجات الجودة والالتزام في كافة مراحل التنفيذ.
+                </p>
+
+            </div>
+        </section>
+
+
+
+
+        <!-- =====================================================
+                PROJECTS GRID (with animations)
+            ====================================================== -->
+        <section class="container mx-auto px-4 mt-24 py-10">
+
+            <!-- Title -->
+            <div class="flex items-center justify-center mb-16 reveal delay-100">
+                <span class="w-12 h-[2px] bg-accent mr-4"></span>
+                <h2 class="text-3xl md:text-4xl font-bold text-white text-center">
+                    مكتبة المشاريع <span class="text-accent">المتميزة</span>
+                </h2>
+                <span class="w-12 h-[2px] bg-accent ml-4"></span>
+            </div>
+
+            <!-- GRID -->
+            <!-- GRID (Dynamically populated from script.js) -->
+            <div id="project-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 min-h-[400px]">
+                <!-- Projects will be injected here -->
+            </div>
+
+            <!-- LOAD MORE BUTTON -->
+            <div class="flex justify-center mt-10">
+                <button id="load-more-projects" class="bg-accent text-primary font-bold px-8 py-3 rounded-full text-lg
+                            hover:bg-accent2 transition shadow-lg hover:shadow-xl hidden">
+                    عرض المزيد
+                </button>
+            </div>
+
+        </section>
+
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="footer" class="bg-primary border-t border-secondary mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+            <div class="grid md:grid-cols-4 gap-8 border-b border-text-muted/20 pb-8 mb-8">
+                <!-- 1: About -->
+                <div class="space-y-4 md:border-l md:border-text-muted/30 md:pl-6">
+                    <h4 class="text-2xl font-extrabold text-accent">الحسيني للمقاولات</h4>
+                    <p class="text-text-muted">نحن هنا لتحويل رؤيتك إلى واقع ملموس بأعلى معايير الدقة والجودة.</p>
+                </div>
+
+                <!-- 2: Quick Links -->
+                <div class="space-y-3 md:border-l md:border-text-muted/30 md:pl-6">
+                    <h5 class="text-xl font-semibold text-text-main">روابط سريعة</h5>
+                    <ul class="space-y-2 text-text-muted">
+                        <li><a href="../" class="hover:text-accent transition">الرئيسية</a></li>
+                        <li><a href="../من-نحن/" class="hover:text-accent transition">من نحن</a></li>
+                        <li><a href="#" class="text-accent">المشاريع</a></li>
+                        <li><a href="../مقالات/" class="hover:text-accent transition">المقالات</a></li>
+                    </ul>
+                </div>
+
+                <!-- 3: Contact -->
+                <div class="space-y-3 md:border-l md:border-text-muted/30 md:pl-6">
+                    <h5 class="text-xl font-semibold text-text-main">اتصل بنا</h5>
+                    <ul class="space-y-2 text-text-muted">
+                        <li class="flex items-center"><i class="fas fa-envelope ml-2 text-accent"></i>
+                            <a href="mailto:hasn.202002@gmail.com"
+                                class="hover:text-accent transition">hasn.202002@gmail.com</a>
+                        </li>
+                        <li class="flex items-center"><i class="fas fa-phone ml-2 text-accent"></i>
+                            <a href="tel:+201003110809" class="hover:text-accent transition">01003110809</a>
+                        </li>
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt ml-2 text-accent"></i> مصر - أسوان
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 4: Social -->
+                <div class="space-y-3">
+                    <h5 class="text-xl font-semibold text-text-main">تابعنا</h5>
+                    <div class="flex space-x-4 space-x-reverse">
+                        <a href="https://wa.me/201003110809" target="_blank"
+                            class="text-text-muted text-2xl hover:text-accent"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.facebook.com/alhusseinycont" target="_blank"
+                            class="text-text-muted text-2xl hover:text-accent"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center text-text-muted text-sm">
+                <p>جميع الحقوق محفوظة — <span class="text-accent font-semibold mx-1">الحسيني للمقاولات</span> 2026
+                    &copy;</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CONTACT FLOAT BUTTONS -->
+    <div id="contact-group" class="fixed bottom-6 right-6 z-50 flex flex-col items-center">
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/201003110809" target="_blank" class="absolute bottom-0 left-0 social-icon bg-[#facc15] text-blue-950 w-12 h-12 rounded-full flex items-center justify-center
+                    shadow-lg text-xl transition-all duration-300 ease-out-expo transform scale-0 opacity-0
+                    hover:scale-110 hover:shadow-[0_0_12px_rgba(255,215,0,0.7)]" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+
+        <!-- Email -->
+        <a href="mailto:hasn.202002@gmail.com" target="_blank" class="absolute bottom-0 left-0 social-icon bg-[#facc15] text-blue-950 w-12 h-12 rounded-full flex items-center justify-center
+                    shadow-lg text-xl transition-all duration-300 ease-out-expo transform scale-0 opacity-0
+                    hover:scale-110 hover:shadow-[0_0_12px_rgba(255,215,0,0.7)]" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+        </a>
+
+        <!-- Phone -->
+        <a href="tel:+201003110809" target="_blank" class="absolute bottom-0 left-0 social-icon bg-[#facc15] text-blue-950 w-12 h-12 rounded-full flex items-center justify-center
+                    shadow-lg text-xl transition-all duration-300 ease-out-expo transform scale-0 opacity-0
+                    hover:scale-110 hover:shadow-[0_0_12px_rgba(255,215,0,0.7)]" aria-label="Phone">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+
+        <!-- Toggle Button -->
+        <button id="social-toggle-btn" class="w-16 h-16 bg-accent rounded-full flex items-center justify-center shadow-light-accent
+                    text-primary text-2xl transition-all duration-300 ease-in-out hover:bg-accent-darker
+                    transform hover:scale-110 group relative" aria-label="Toggle Contact">
+            <i class="fas fa-headset"></i>
+        </button>
+
+        <!-- Chatbot Window (optional) -->
+        <div id="chatbot-window"
+            class="chat-closed transition-all duration-500 ease-out-expo absolute bottom-20 right-0">
+        </div>
+
+    </div>
+    </div>
+
+    <!-- CONTRACTING-STYLE MODAL (SOLID & PROFESSIONAL) -->
+    <div id="project-modal" class="fixed inset-0 z-[9999] hidden items-center justify-center p-2 sm:p-4">
+
+        <!-- Overlay -->
+        <div id="modal-overlay"
+            class="absolute inset-0 bg-primary/95 backdrop-blur-xl opacity-0 transition-opacity duration-500"></div>
+
+        <!-- Modal Content Box -->
+        <div id="modal-box"
+            class="relative w-[95%] max-w-7xl h-[85vh] bg-[#0a192f] rounded-3xl overflow-hidden shadow-[0_0_100px_rgba(0,0,0,0.6)] border border-white/5 flex flex-col lg:flex-row transform scale-90 opacity-0 transition-all duration-500 ease-out-expo">
+
+            <!-- 1. IMAGE SECTION (Right Side on Desktop) -->
+            <div class="relative w-full lg:w-1/2 h-[35%] lg:h-full bg-black group shrink-0 order-1 lg:order-2">
+                <div class="relative w-full h-full">
+                    <img id="modal-image" src="" class="w-full h-full object-cover transition-transform duration-700"
+                        alt="Project Project">
+                    <div id="image-fade-layer"
+                        class="absolute inset-0 bg-primary opacity-0 transition-opacity duration-500 pointer-events-none">
+                    </div>
+                </div>
+
+                <!-- Floating Controls -->
+                <div class="absolute inset-0 flex flex-col justify-between p-6">
+                    <div class="flex justify-between items-start">
+                        <button id="close-modal"
+                            class="w-12 h-12 rounded-full bg-black/40 text-white backdrop-blur-md flex items-center justify-center hover:bg-accent hover:text-primary transition-all hover:rotate-90 border border-white/10">
+                            <i class="fas fa-times text-xl"></i>
+                        </button>
+                    </div>
+
+                    <div
+                        class="flex justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <button id="prev-img"
+                            class="w-12 h-12 rounded-xl bg-white/5 text-white backdrop-blur-md flex items-center justify-center hover:bg-accent hover:text-primary transition-all border border-white/10">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <button id="next-img"
+                            class="w-12 h-12 rounded-xl bg-white/5 text-white backdrop-blur-md flex items-center justify-center hover:bg-accent hover:text-primary transition-all border border-white/10">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Slider Indicators -->
+                <div id="modal-indicators"
+                    class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 z-20">
+                    <!-- Dots injected by JS -->
+                </div>
+            </div>
+
+            <!-- 2. DETAILS SECTION (Left Side on Desktop) -->
+            <div class="w-full lg:w-1/2 flex-1 lg:h-full p-6 md:p-12 bg-gradient-to-b from-[#0a192f] to-[#0c1b35] flex flex-col overflow-y-auto custom-scroll order-2 lg:order-1"
+                data-lenis-prevent>
+
+                <!-- Title & Basic Info -->
+                <div class="reveal-item text-center mb-6 border-b border-white/5 pb-6">
+                    <h2 id="modal-title" class="text-3xl md:text-5xl font-black text-white mb-4">
+                        عنوان المشروع
+                    </h2>
+                    <div class="flex items-center justify-center gap-2 text-accent font-bold">
+                        <span class="w-8 h-[2px] bg-accent/30"></span>
+                        <span class="uppercase tracking-widest text-xs opacity-70">تفاصيل التنفيذ الهندسي</span>
+                        <span class="w-8 h-[2px] bg-accent/30"></span>
+                    </div>
+                </div>
+
+                <!-- Contact Section (New) -->
+                <div id="modal-contact" class="reveal-item delay-100 mb-10">
+                    <!-- Injected from JS -->
+                </div>
+
+                <!-- Description Only -->
+                <div class="reveal-item delay-200 border-t border-white/5 pt-6">
+                    <h4 class="text-lg font-black text-white mb-4 flex items-center gap-3">
+                        <i class="fas fa-file-alt text-accent"></i>
+                        نبذة عن المشروع
+                    </h4>
+                    <p id="modal-description" class="text-text-light/70 text-base leading-relaxed font-medium">
+                        وصف تفصيلي...
+                    </p>
+                </div>
+
+                <!-- Footer CTA -->
+                <div
+                    class="mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-6 reveal-item delay-600">
+                    <p class="text-gray-500 text-sm font-bold">نهتم بأدق التفاصيل لضمان أعلى جودة في التنفيذ</p>
+                    <a href="#" onclick="openQuoteModal(); return false;"
+                        class="group inline-block bg-accent hover:bg-accent2 text-primary font-bold py-2 px-5
+                            rounded-full text-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1 shadow-lg">
+                        <span>ابدأ مشروعك</span>
+                        <i class="fas fa-arrow-left 
+                                inline-block transition-transform duration-300 group-hover:-translate-x-2"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Back To Top Button -->
+    <button id="scrollTopBtn">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- QUOTE MODAL -->
+    <div id="quote-modal" class="fixed inset-0 z-[10001] hidden flex items-center justify-center px-4">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" onclick="closeQuoteModal()"></div>
+
+        <!-- Modal Content -->
+        <div
+            class="relative bg-[#0a192f] border border-white/10 rounded-2xl p-8 max-w-lg w-full shadow-2xl transform transition-all scale-100">
+            <button onclick="closeQuoteModal()"
+                class="absolute top-4 right-4 text-gray-500 hover:text-white transition">
+                <i class="fas fa-times text-xl"></i>
+            </button>
+
+            <div class="text-center mb-6">
+                <div
+                    class="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center text-accent text-2xl mx-auto mb-4">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-white mb-2">ابدأ مشروعك معنا</h3>
+                <p class="text-gray-400 text-sm">املأ البيانات وسيتم تحويلك مباشرة لمحادثة فريقنا عبر واتساب.</p>
+            </div>
+
+            <form onsubmit="sendToWhatsapp(event)" class="space-y-4">
+                <div>
+                    <label class="block text-white text-sm font-bold mb-2">الاسم</label>
+                    <input type="text" id="w-name" required
+                        class="w-full bg-[#0d1b3e] border border-white/10 rounded-lg px-4 py-3 text-white focus:border-accent focus:outline-none transition"
+                        placeholder="الاسم الكريم">
+                </div>
+                <div>
+                    <label class="block text-white text-sm font-bold mb-2">نوع المشروع</label>
+                    <select id="w-type"
+                        class="w-full bg-[#0d1b3e] border border-white/10 rounded-lg px-4 py-3 text-white focus:border-accent focus:outline-none transition">
+                        <option value="تصميم معماري">تصميم معماري</option>
+                        <option value="بناء وتشيد">بناء وتشييد</option>
+                        <option value="تصميم داخلي">تصميم داخلي</option>
+                        <option value="إشراف هندسي">إشراف هندسي</option>
+                        <option value="أخرى">أخرى</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-white text-sm font-bold mb-2">تفاصيل إضافية</label>
+                    <textarea id="w-message" rows="3"
+                        class="w-full bg-[#0d1b3e] border border-white/10 rounded-lg px-4 py-3 text-white focus:border-accent focus:outline-none transition"
+                        placeholder="اكتب نبذة مختصرة عن مشروعك..."></textarea>
+                </div>
+
+                <button type="submit"
+                    class="w-full bg-[#25D366] hover:bg-[#20b85a] text-white font-bold py-3 rounded-lg flex items-center justify-center gap-2 transition-all transform hover:scale-[1.02]">
+                    <span>إرسال عبر واتساب</span>
+                    <i class="fab fa-whatsapp text-lg"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+
+</body>
+
+</html>

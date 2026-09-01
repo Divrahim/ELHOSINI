@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مدونة الحسيني | نصائح في البناء والتشطيب</title>
+    <meta name="description"
+        content="تابع أحدث المقالات والنصائح الهندسية من شركة الحسيني للمقاولات. كل ما يخص البناء، السباكة، الكهرباء، والتشطيبات الحديثة." />
+    <meta name="keywords"
+        content="مدونة مقاولات, نصائح بناء, مقالات هندسية, سباكة, كهرباء, تشطيب شقق, خرسانة, طوب, مواد بناء, أسعار مواد البناء, خطوات البناء, نصائح تشطيب, أخطاء البناء" />
+    <meta name="author" content="الحسيني للمقاولات" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://alhusseinycont.com/مقالات" />
+    <meta property="og:title" content="مدونة الحسيني | نصائح في البناء والتشطيب" />
+    <meta property="og:description"
+        content="تابع أحدث المقالات والنصائح الهندسية من شركة الحسيني للمقاولات. كل ما يخص البناء، السباكة، الكهرباء، والتشطيبات الحديثة." />
+    <meta property="og:image" content="../image/logo.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://alhusseinycont.com/مقالات" />
+    <meta property="twitter:title" content="مدونة الحسيني | نصائح في البناء والتشطيب" />
+    <meta property="twitter:description"
+        content="تابع أحدث المقالات والنصائح الهندسية من شركة الحسيني للمقاولات. كل ما يخص البناء، السباكة، الكهرباء، والتشطيبات الحديثة." />
+    <meta property="twitter:image" content="../image/logo.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../image/icon.png" />
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/all.min.css" />
+    <link rel="stylesheet" href="../css/normalize.css" />
+
+    <!-- Lenis for Smooth Scroll -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap"
+        rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0a192f",
+                        secondary: "#142a4b",
+                        accent: "#ffd700",
+                        accent2: "#ffae00",
+                        "text-main": "#ffffff",
+                        "text-light": "#e0e0e0",
+                        "text-muted": "#8892b0",
+                        "border-color": "#334155",
+                    },
+                    fontFamily: {
+                        sans: ["Tajawal", "sans-serif"],
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                },
+            },
+        };
+    </script>
+</head>
+
+<body class="bg-primary text-text-main font-sans overflow-x-hidden">
+
+    <!-- HEADER -->
+    <header id="main-header" class="floating-nav">
+        <div class="w-full px-6 md:px-10">
+
+            <div class="flex items-center justify-between py-3">
+
+                <div class="flex items-center gap-12">
+                    <!-- (1) Logo + Name + Toggle -->
+                    <div class="flex items-center gap-4">
+
+                        <!-- Toggle (Magnetic Animated) -->
+                        <button id="menu-toggle" type="button" aria-label="Toggle menu"
+                            class="magnetic-toggle md:hidden">
+                            <div class="burger-lines">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </button>
+
+                        <!-- Logo & Name -->
+                        <a href="../" class="flex items-center gap-3 group">
+                            <img src="../image/logo.png"
+                                class="w-12 h-12 rounded-full object-cover border-2 border-transparent group-hover:border-accent transition-all duration-300"
+                                alt="شعار الحسيني للمقاولات">
+
+                            <div class="text-right leading-tight">
+                                <h3 class="text-lg font-bold text-white group-hover:text-accent transition-colors">
+                                    الحسيني</h3>
+                            </div>
+                        </a>
+
+                    </div>
+
+                    <!-- (2) Center Navigation (Desktop) -->
+                    <nav
+                        class="hidden md:flex items-center gap-8 bg-white/5 px-8 py-2 rounded-full backdrop-blur-sm border border-white/5">
+
+                        <a href="../"
+                            class="text-text-light font-medium text-sm hover:text-accent transition">الرئيسية</a>
+                        <span class="w-[1px] h-4 bg-white/10"></span>
+
+                        <a href="../من-نحن/"
+                            class="text-text-light font-medium text-sm hover:text-accent transition">من نحن</a>
+                        <span class="w-[1px] h-4 bg-white/10"></span>
+
+                        <a href="../المشاريع/"
+                            class="text-text-light font-medium text-sm hover:text-accent transition">المشاريع</a>
+                        <span class="w-[1px] h-4 bg-white/10"></span>
+
+                        <a href="#" class="text-accent font-medium text-sm transition">مقالات</a>
+
+                    </nav>
+                </div>
+
+                <!-- (3) Header Buttons -->
+                <div class="flex items-center gap-4">
+                    <a href="tel:+201003110809"
+                        class="flex items-center gap-2 bg-accent hover:bg-accent2 text-primary px-4 py-2 md:px-5 md:py-2 rounded-full text-sm font-bold transition transform hover:scale-105">
+                        <span class="hidden md:inline">تواصل معنا</span>
+                        <i class="fas fa-phone-alt text-xs"></i>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- (4) MOBILE MENU -->
+            <ul class="dropdown-menu">
+                <li><a href="../">الرئيسية</a></li>
+                <li><a href="../من-نحن/">من نحن</a></li>
+                <li><a href="../المشاريع/">المشاريع</a></li>
+                <li><a href="#">مقالات</a></li>
+            </ul>
+
+        </div>
+    </header>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="min-h-screen pb-20">
+
+        <!-- HERO SECTION -->
+        <section
+            class="relative min-h-screen flex items-center justify-center overflow-hidden bg-fixed bg-center bg-cover"
+            style="background-image: url('../image/3.png');">
+            <!-- Dark Overlay -->
+            <div class="absolute inset-0 bg-black/70"></div>
+
+            <div class="container mx-auto px-4 text-center relative z-10 reveal">
+                <nav class="flex justify-center items-center gap-3 text-sm mb-8 text-text-light/60 font-medium">
+                    <a href="../" class="text-text-light hover:text-accent transition-colors">الرئيسية</a>
+                    <span class="text-light/20 text-xs">//</span>
+                    <span class="text-accent">مقالات</span>
+                </nav>
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6">
+                    مدونة <span class="text-accent">الحسيني</span>
+                </h1>
+                <p class="text-xl text-text-muted max-w-2xl mx-auto leading-relaxed">
+                    اكتشف معنا أحدث الاتجاهات في عالم البناء، نصائح هندسية، وأخبار مشاريعنا. نشارك معكم خبرة
+                    تمتد لعقود.
+                </p>
+            </div>
+        </section>
+
+        <!-- FEATURED ARTICLE -->
+        <section class="container mx-auto px-4 mt-24 mb-20 reveal delay-100">
+            <div
+                class="bg-secondary rounded-2xl overflow-hidden shadow-2xl border border-white/5 flex flex-col lg:flex-row group hover:border-accent/30 transition-all duration-500">
+
+                <div class="lg:w-3/5 overflow-hidden relative">
+                    <img src="../image/profile.png" alt="Featured Article"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    <div class="absolute top-6 right-6 bg-accent text-primary font-bold px-4 py-1 rounded-full text-sm">
+                        مقال مميز</div>
+                </div>
+
+                <div class="lg:w-2/5 p-8 lg:p-12 flex flex-col justify-center">
+                    <div class="flex items-center gap-3 text-sm text-text-muted mb-4">
+                        <span><i class="far fa-calendar-alt ml-2"></i> 10 فبراير 2026</span>
+                        <span class="w-1 h-1 bg-accent rounded-full"></span>
+                        <span>مقاول</span>
+                    </div>
+
+                    <h2
+                        class="text-3xl font-bold text-white mb-4 leading-tight group-hover:text-accent transition-colors">
+                        اختيار المقاول المناسب… حجر الأساس لبيت العمر
+                    </h2>
+
+                    <p class="text-text-light mb-6 text-justify leading-loose line-clamp-3">
+                        عندما تقرر أن تبني بيتك، فأنت لا تبدأ مشروعًا عاديًا… أنت تبدأ حكاية. اختيار المقاول المناسب
+                        هو الخطوة الأهم لضمان نجاح مشروعك وتجنب المشاكل المستقبلية.
+                    </p>
+
+                    <a href="اختيار-المقاول/"
+                        class="inline-flex items-center text-accent font-bold hover:gap-4 gap-2 transition-all duration-300">
+                        اقرأ المقال كاملاً <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ARTICLES GRID -->
+        <section class="container mx-auto px-4">
+
+            <div class="flex items-center justify-between mb-10 reveal">
+                <h3 class="text-2xl font-bold text-white border-r-4 border-accent pr-4">أحدث المقالات</h3>
+
+                <!-- Categories (Optional Filter) -->
+                <div id="category-filters" class="hidden sm:flex gap-3">
+                    <button class="filter-btn px-4 py-1 rounded-full bg-accent text-primary font-bold text-sm"
+                        data-cat="all">الكل</button>
+                    <!-- Js populates this -->
+                </div>
+            </div>
+
+            <div id="articles-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Articles injected by script.js -->
+            </div>
+
+            <!-- Load More -->
+            <div id="articles-pagination-wrapper" class="text-center mt-16 hidden">
+                <button id="load-more-btn-articles"
+                    class="bg-white/5 hover:bg-accent hover:text-primary text-white border border-white/10 px-8 py-3 rounded-full font-bold transition-all duration-300 transform hover:scale-105 shadow-lg">
+                    مشاهدة المزيد من المقالات
+                </button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="footer" class="bg-primary border-t border-secondary mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+            <div class="grid md:grid-cols-4 gap-8 border-b border-text-muted/20 pb-8 mb-8">
+                <!-- 1: About -->
+                <div class="space-y-4 md:border-l md:border-text-muted/30 md:pl-6">
+                    <h4 class="text-2xl font-extrabold text-accent">الحسيني للمقاولات</h4>
+                    <p class="text-text-muted">نحن هنا لتحويل رؤيتك إلى واقع ملموس بأعلى معايير الدقة والجودة.
+                    </p>
+                </div>
+
+                <!-- 2: Quick Links -->
+                <div class="space-y-3 md:border-l md:border-text-muted/30 md:pl-6">
+                    <h5 class="text-xl font-semibold text-text-main">روابط سريعة</h5>
+                    <ul class="space-y-2 text-text-muted">
+                        <li><a href="../" class="hover:text-accent transition">الرئيسية</a></li>
+                        <li><a href="../من-نحن/" class="hover:text-accent transition">من نحن</a></li>
+                        <li><a href="../المشاريع/" class="hover:text-accent transition">المشاريع</a>
+                        </li>
+                        <li><a href="#" class="text-accent">المقالات</a></li>
+                    </ul>
+                </div>
+
+                <!-- 3: Contact -->
+                <div class="space-y-3 md:border-l md:border-text-muted/30 md:pl-6">
+                    <h5 class="text-xl font-semibold text-text-main">اتصل بنا</h5>
+                    <ul class="space-y-2 text-text-muted">
+                        <li class="flex items-center"><i class="fas fa-envelope ml-2 text-accent"></i>
+                            <a href="mailto:hasn.202002@gmail.com"
+                                class="hover:text-accent transition">hasn.202002@gmail.com</a>
+                        </li>
+                        <li class="flex items-center"><i class="fas fa-phone ml-2 text-accent"></i>
+                            <a href="tel:+201003110809" class="hover:text-accent transition">01003110809</a>
+                        </li>
+                        <li class="flex items-center"><i class="fas fa-map-marker-alt ml-2 text-accent"></i>
+                            مصر - أسوان</li>
+                    </ul>
+                </div>
+
+                <!-- 4: Social -->
+                <div class="space-y-3">
+                    <h5 class="text-xl font-semibold text-text-main">تابعنا</h5>
+                    <div class="flex space-x-4 space-x-reverse">
+                        <a href="https://wa.me/201003110809" target="_blank"
+                            class="text-text-muted text-2xl hover:text-accent"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.facebook.com/alhusseinycont" target="_blank"
+                            class="text-text-muted text-2xl hover:text-accent"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center text-text-muted text-sm">
+                <p>جميع الحقوق محفوظة — <span class="text-accent font-semibold mx-1">الحسيني للمقاولات</span>
+                    2026
+                    &copy;</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CONTACT FLOAT BUTTONS -->
+    <div id="contact-group" class="fixed bottom-6 right-6 z-50 flex flex-col items-center">
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/201003110809" target="_blank" class="absolute bottom-0 left-0 social-icon bg-[#facc15] text-blue-950 w-12 h-12 rounded-full flex items-center justify-center
+                    shadow-lg text-xl transition-all duration-300 ease-out-expo transform scale-0 opacity-0
+                    hover:scale-110 hover:shadow-[0_0_12px_rgba(255,215,0,0.7)]" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+
+        <!-- Email -->
+        <a href="mailto:hasn.202002@gmail.com" target="_blank" class="absolute bottom-0 left-0 social-icon bg-[#facc15] text-blue-950 w-12 h-12 rounded-full flex items-center justify-center
+                    shadow-lg text-xl transition-all duration-300 ease-out-expo transform scale-0 opacity-0
+                    hover:scale-110 hover:shadow-[0_0_12px_rgba(255,215,0,0.7)]" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+        </a>
+
+        <!-- Phone -->
+        <a href="tel:+201003110809" target="_blank" class="absolute bottom-0 left-0 social-icon bg-[#facc15] text-blue-950 w-12 h-12 rounded-full flex items-center justify-center
+                    shadow-lg text-xl transition-all duration-300 ease-out-expo transform scale-0 opacity-0
+                    hover:scale-110 hover:shadow-[0_0_12px_rgba(255,215,0,0.7)]" aria-label="Phone">
+            <i class="fas fa-phone-alt"></i>
+        </a>
+
+        <!-- Toggle Button -->
+        <button id="social-toggle-btn" class="w-16 h-16 bg-accent rounded-full flex items-center justify-center shadow-light-accent
+                    text-primary text-2xl transition-all duration-300 ease-in-out hover:bg-accent-darker
+                    transform hover:scale-110 group relative" aria-label="Toggle Contact">
+            <i class="fas fa-headset"></i>
+        </button>
+
+        <!-- Chatbot Window (optional) -->
+        <div id="chatbot-window"
+            class="chat-closed transition-all duration-500 ease-out-expo absolute bottom-20 right-0">
+        </div>
+
+    </div>
+
+    <!-- Back To Top Button -->
+    <button id="scrollTopBtn">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="../script.js"></script>
+
+</body>
+
+</html>

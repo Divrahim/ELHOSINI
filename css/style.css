@@ -1,0 +1,544 @@
+/* ===================== ROOT VARIABLES ===================== */
+:root {
+    /* ألوان أساسية */
+    --color-primary: #0a192f;
+    --color-secondary: #142a4b;
+    --color-accent: #ffd700;
+    --color-accent2: #ffae00;
+    --color-text: #ffffff;
+    --color-text-light: #e0e0e0;
+    --color-text-muted: #8892b0;
+
+    /* حدود وظلال */
+    --border-color: #334155;
+    --shadow-light: 0 4px 15px rgba(255, 215, 0, 0.2);
+    --shadow-strong: 0 8px 32px rgba(0, 0, 0, 0.37);
+
+    /* أحجام */
+    --nav-height: 80px;
+    --container-width: 90%;
+    --radius-sm: 0.375rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 1rem;
+    --radius-pill: 9999px;
+
+    /* خطوط */
+    --font-family: "Tajawal", sans-serif;
+    --font-size-base: 1rem;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 2.5rem;
+    --font-weight-bold: 700;
+    --font-weight-semibold: 600;
+
+    /* انتقال */
+    --transition: 0.3s ease;
+}
+
+/* ===================== Scroll To Top ===================== */
+#scrollTopBtn {
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    width: 35px;
+    height: 35px;
+
+    background: var(--color-primary);
+    border: 2px solid var(--color-accent);
+    backdrop-filter: blur(12px);
+
+    color: var(--color-accent);
+
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    box-shadow: var(--shadow-strong);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: var(--transition);
+
+    z-index: 999;
+}
+
+#scrollTopBtn.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-5px);
+}
+
+#scrollTopBtn:hover {
+    /* background: rgba(0, 0, 0, 0.8); */
+    border-color: var(--color-accent);
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
+    transform: translateY(-10px);
+}
+
+
+/* ===================== Floating Navbar ===================== */
+.floating-nav {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    max-width: 1400px;
+    border-radius: 50px;
+    background: rgba(10, 25, 47, 0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    z-index: 1000;
+}
+
+.floating-nav.scrolled {
+    top: 10px;
+    background: rgba(10, 25, 47, 0.85);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    width: 98%;
+}
+
+/* ===================== Magnetic Toggle Button ===================== */
+.magnetic-toggle {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 101;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.magnetic-toggle:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.1);
+}
+
+.burger-lines {
+    width: 24px;
+    height: 18px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.burger-lines span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--color-accent);
+    border-radius: 4px;
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55), width 0.3s ease;
+}
+
+.burger-lines span:nth-child(1) {
+    width: 50%;
+    transform-origin: right;
+    margin-left: auto;
+}
+
+.burger-lines span:nth-child(2) {
+    width: 100%;
+}
+
+.burger-lines span:nth-child(3) {
+    width: 75%;
+    transform-origin: right;
+    margin-left: auto;
+}
+
+/* Hover Effect */
+.magnetic-toggle:hover .burger-lines span:nth-child(1) {
+    width: 100%;
+}
+
+.magnetic-toggle:hover .burger-lines span:nth-child(3) {
+    width: 100%;
+}
+
+/* Active State (X Shape) */
+.magnetic-toggle.open .burger-lines span:nth-child(1) {
+    transform: rotate(-45deg) translate(-2px, 9px);
+    width: 100%;
+    background: #ff4d4d;
+    /* Red for close */
+}
+
+.magnetic-toggle.open .burger-lines span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-10px);
+}
+
+.magnetic-toggle.open .burger-lines span:nth-child(3) {
+    transform: rotate(45deg) translate(-2px, -9px);
+    width: 100%;
+    background: #ff4d4d;
+}
+
+/* ===================== Dropdown Menu ===================== */
+/* ===================== Dropdown Menu (Compact Mobile) ===================== */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    /* Directly below header */
+    left: 0;
+    width: 100%;
+
+    background: rgba(10, 25, 47, 0.98);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 0 0 25px 25px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 25px 0;
+
+    z-index: 90;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dropdown-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-menu li {
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: 0.3s ease;
+}
+
+.dropdown-menu.active li {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered Delay for Menu Items */
+.dropdown-menu.active li:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.dropdown-menu.active li:nth-child(2) {
+    transition-delay: 0.15s;
+}
+
+.dropdown-menu.active li:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+.dropdown-menu.active li:nth-child(4) {
+    transition-delay: 0.25s;
+}
+
+.dropdown-menu li a {
+    display: inline-block;
+    padding: 8px 15px;
+    font-size: 1.1rem;
+    /* Smaller font as requested */
+    font-weight: 600;
+    color: var(--color-text);
+    transition: 0.3s;
+}
+
+.dropdown-menu li a:hover {
+    color: var(--color-accent);
+    transform: scale(1.05);
+}
+
+/* Mobile Adjustments for Header to allow Fixed Positioning */
+@media (max-width: 768px) {
+    .floating-nav {
+        top: 0 !important;
+        left: 0 !important;
+        transform: none !important;
+        width: 100% !important;
+        border-radius: 0 !important;
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        background: rgba(10, 25, 47, 0.95);
+    }
+
+    .floating-nav.scrolled {
+        top: 0 !important;
+        width: 100% !important;
+    }
+}
+
+/* ===================== Contracting-Style Modal ===================== */
+#project-modal {
+    background: transparent;
+}
+
+#modal-box {
+    box-shadow: 0 50px 100px rgba(0, 0, 0, 0.5);
+}
+
+/* Modal Open Animation (Center Scale) */
+#modal-box.active {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Custom Scroll for Light Background */
+.custom-scroll-dark::-webkit-scrollbar {
+    width: 5px;
+}
+
+.custom-scroll-dark::-webkit-scrollbar-track {
+    background: #f8f9fa;
+}
+
+.custom-scroll-dark::-webkit-scrollbar-thumb {
+    background: #ddd;
+    border-radius: 10px;
+}
+
+.custom-scroll-dark::-webkit-scrollbar-thumb:hover {
+    background: #ccc;
+}
+
+/* Ken Burns Effect Refinement */
+#modal-image {
+    transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (max-width: 768px) {
+    #modal-box {
+        height: 100vh;
+        border-radius: 0;
+    }
+}
+
+/* ===================== Scroll ===================== */
+
+.custom-scroll::-webkit-scrollbar {
+    width: 8px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Glassmorphism Card */
+.glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* ===================== GLOBAL SCROLLBAR ===================== */
+
+/* Scrollbar Width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Scrollbar Track (الخلفية) */
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+/* Scrollbar Thumb (الجزء المتحرك) */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #ffd700, #e5c100);
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease;
+}
+
+/* Hover Effect */
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #ffde33, #f0c800);
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+}
+
+/* ===================== Modern About Section ===================== */
+.about-image-container {
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.about-img {
+    transition: transform 0.7s ease;
+}
+
+.about-image-container:hover .about-img {
+    transform: scale(1.05);
+}
+
+.experience-badge {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    /* Arabic RTL: positioned correctly */
+
+    background: var(--color-accent);
+    color: var(--color-primary);
+    padding: 15px 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+    text-align: center;
+    z-index: 2;
+    animation: floatBadge 3s ease-in-out infinite;
+}
+
+@keyframes floatBadge {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.about-feature {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.about-feature:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateX(-5px);
+    border-color: var(--color-accent);
+}
+
+.about-feature i {
+    font-size: 1.5rem;
+    color: var(--color-accent);
+}
+
+/* ===================== Reveal On Scroll ===================== */
+.reveal,
+.reveal-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.reveal.active,
+.reveal-item.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal.from-left {
+    transform: translateX(-50px);
+}
+
+.reveal.from-right {
+    transform: translateX(50px);
+}
+
+.reveal.active.from-left,
+.reveal.active.from-right {
+    transform: translateX(0);
+}
+
+/* Staggered Delays */
+.reveal.delay-100 {
+    transition-delay: 0.1s;
+}
+
+.reveal.delay-200 {
+    transition-delay: 0.2s;
+}
+
+.reveal.delay-300 {
+    transition-delay: 0.3s;
+}
+
+/* Lenis Recommended CSS */
+html.lenis {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden;
+}
+
+
+@keyframes slowzoom {
+    0% {
+        transform: scale(1.1);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes arrowBounce {
+
+    0%,
+    100% {
+        transform: translate(-50%, 0);
+    }
+
+    50% {
+        transform: translate(-50%, 10px);
+    }
+}
